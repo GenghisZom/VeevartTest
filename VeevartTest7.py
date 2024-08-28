@@ -31,8 +31,14 @@ while(posicion<25):
         print(f"En la casilla {posicion} hay una serpiente, bajas hasta la casilla {lista_de_serpientes[posicion]}")
         posicion = lista_de_serpientes[posicion]
     elif(posicion>=25):
-        posicion = 25
-        print(f"Llegaste a la casilla N.{posicion}, Ganaste!")
-        break
+        if(posicion==25):
+            print(f"Llegaste a la casilla N.{posicion}, Ganaste!.")
+            break
+        else:
+            excedente = posicion - 25
+            print(f"Llegaste a la casilla N.{posicion}, Te pasaste! Retrocedes {excedente} casillas.") 
+            posicion = (25 - excedente)
+            print(f"Tu casilla actual es {posicion}")
+        
 
     
